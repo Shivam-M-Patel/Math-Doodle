@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Math Doodle Challenge</title>
+    <link href="../static/style/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="info-main">
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="../static/assets/math.jpeg" alt="hand-written digits"></div>
+              <div class="card_content">
+                <!-- <h2 class="card_title">Farmstand Salad &#x2022; $9</h2> -->
+                <div class="card_text">
+                  <p><strong class="highlight_color"><em>Ready to play?</em></strong> Click the button to start!</p>
+                  <p><strong class="highlight_color">Solve math equations</strong> by drawing the answers. It's doodling with a purpose!</p>
+                  <p><strong class="highlight_color">Instant recognition</strong> updates score if you're correct.</p>
+                  <p><strong class="highlight_color">Clear and retry</strong> until you get it right.</p>
+                  <p><strong class="highlight_color">Watch out for the timer!</strong> Solve as many as you can!</p>
+                  <p><strong class="highlight_color">See your stats</strong> at the end.</p>
+                  <p><strong class="highlight_color">If you make it to the top 15 scoreboard,</strong> the game will ask you to save your score. Will you make it?</p>
+              </div>           
+              </div>
+            </div>
+          </li>
+    
+        </ul>
+      </div>
+
+    <div class="container">
+        <h1 class="title">Math Doodle Challenge</h1>
+        <p class="subtitle">Using PyTorch and Flask</p>
+        
+        <div id="game-container">
+            <button id="play-btn">
+                Play Game
+            </button>
+            <div id="score-container">Score: 0</div>
+        </div>
+
+        <div id="equation-container" style="display: none;">
+        <div class="equation">Equation: <span id="equation">X + Y</span></div>
+        <div class="timer">Timer: <span id="timer">00:00</span></div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="inputimg" width="196" height="196"></canvas>
+        </div>
+        <button id="clearbtn">Clear</button>
+        
+        <div class="prediction-container">
+            <div class="predicted-digit" id="pred">0</div>
+            <div class="probability" id="prob">Probability: 0%</div>
+        </div>
+</div>
+
+<div class="wrapper">
+  <table id="scoreboardTable">
+      <caption>High Scores (Top 15)</caption>
+      <tr>
+          <th>Pos</th>
+          <th>Name</th>
+          <th>Score</th>
+      </tr>
+  </table>
+</div>
+
+  <div class="footer-basic">
+    <footer>
+        <div class="social">
+            <a href="https://github.com/Shivam-M-Patel" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/shivam-patel-07759b1a0" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="mailto:shivampatel6808@gmail.com" target="_blank"><ion-icon name="mail-open-outline"></ion-icon></i></a>
+            <a href="https://www.instagram.com/p_shivam02" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+        <p class="copyright">Shivam Patel © 2024</p>
+    </footer>
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</body>
+
+</html>

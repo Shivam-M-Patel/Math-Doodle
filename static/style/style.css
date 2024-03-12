@@ -1,0 +1,434 @@
+html {
+    background-color: #17212b;
+}
+/* CSS for main part */
+.container {
+    max-width: calc(100% - 700px);
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* background-color: #1F2833; */
+    background: linear-gradient(to bottom, #0B0C10, #1F2833);
+    color: whitesmoke;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: calc(100% - 380px);
+    position: relative; /* Ensure z-index works */
+    z-index: 1;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #66FCF1;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #C5C6C7;
+}
+
+.canvas-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+canvas {
+    border: 2px solid #444;
+    background-color: #333;
+    max-width: 100%;
+}
+
+#score-container {
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    border: 2px solid #076685cd;
+    font-size: 1rem;
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* Set text color */
+    background-color: #076685cd;
+    border-radius: 5px; /* Add border radius */
+    padding: 10px;
+    max-width: calc(100% - (50% + 20px));
+}
+
+
+#clearbtn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 20px;
+    font-size: 1rem;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+#clearbtn:hover {
+    background-color: #c0392b;
+}
+
+#game-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+#play-btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #076585;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+#play-btn:hover {
+    background-color: #064d66;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.prediction-container {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.predicted-digit {
+    font-size: 8rem;
+    font-weight: bold;
+    border: 2px solid #555;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: #444;
+    color: #fff;
+}
+
+.probability {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    padding-top: 3px;
+}
+
+.equation,
+.timer {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+
+/* CSS for information card  */
+.info-main {
+    max-width: 300px;
+    margin: 20px;
+    margin-top: 10px !important;
+    font-size: 15px;
+    background-color: #0B0C10;
+    border-radius: 10px;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+.card_image {
+    height: calc(13 * 1.2rem);
+    padding: 1.2rem 1.2rem 0;
+    position: relative;
+}
+
+.card_image:before,
+.card_image:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    left: 60%;
+    top: 0;
+    height: 45px;
+    background: #e6e6e6b8;
+    transform: rotate(45deg);
+}
+
+.card_image:after {
+    transform: rotate(-45deg);
+    top: auto;
+    bottom: -22px;
+    left: 40%;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards_item {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+
+.card {
+    background-color: #1F2833;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 30px;
+    line-height: 1.2rem;
+    mask: radial-gradient(circle .8rem at 2px 50%, #0000 98%, #000) 0 0 / 100% 2.4rem;
+}
+
+.card_content {
+    padding: 1.2rem;
+}
+
+p {
+    margin: 1.2rem 0;
+    color: whitesmoke;
+}
+
+.highlight_color {
+    color: #3498db
+}
+
+/* CSS for the scoreboard */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+table {
+    margin: 20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    width: 30%;
+    border: 2px solid #076585; /* Adjusted border color */
+}
+
+caption {
+    color: #e7e4e4; /* Adjusted color for the caption */
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+th {
+    background: #3498db; /* Adjusted background color */
+    padding: 10px 20px;
+    color: #ffffff; /* Adjusted color for th text */
+}
+
+th,
+td {
+    border: 1px solid #076585; /* Adjusted border color */
+}
+
+th:first-child {
+    border-top-left-radius: 5px;
+}
+
+th:last-child {
+    border-top-right-radius: 5px;
+}
+
+th:first-child,
+td:first-child {
+    padding: 7px 8px;
+}
+
+td {
+    padding: 7px 20px;
+    background: #f5f5f5; /* Adjusted background color */
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.top3 td {
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: bold;
+    background: #cdcdcd; /* Adjusted background color */
+    color: rgba(0, 0, 0, 0.8);
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+tr td:last-child {
+    border-right: none;
+}
+
+
+/* CSS for Footer */
+.footer-basic {
+    margin-top: 180px;
+    padding: 20px 0;
+    background-color: #34495e; /* Dark blueish color */
+    color: #ffffff; /* White text color */
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic .social {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.footer-basic .social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-basic .social > a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(52, 73, 94, 0.5); /* Shadow color matches footer background */
+    background-color: #2980b9; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+.footer-basic .copyright {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: whitesmoke;
+    margin-bottom: 0;
+}
+
+
+  /* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: calc(100% - 50px);
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #score-container {
+        right: 10%;
+        max-width: calc(100% - 20px);
+    }
+
+    .info-main {
+        max-width: calc(100% - 40px);
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .container,
+    .wrapper {
+        z-index: initial;
+    }
+    .wrapper {
+        padding-left: 20% !important;
+        display: block;
+    }
+    table {
+        font-size: 12px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-basic{
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .canvas-container {
+        padding-top: 10px;
+        overflow-x: auto;
+    }
+
+    .cards {
+        margin: 10px;
+    }
+
+    .info-main {
+        max-width: calc(100% - 20px);
+        width: 100%;
+        margin: 10px;
+    }
+
+    /*#game-container {*/
+    /*    display: flex;*/
+    /*    justify-content: space-between;*/
+    /*}*/
+    #play-btn {
+        margin-right: 50px;
+    }
+
+    #score-container {
+        margin-top: 20px;
+        /*text-align: center;*/
+        max-width: calc(100% - 50px);
+    }
+
+    .wrapper {
+        padding-left: 5% !important;
+        display: block;
+    }
+    table {
+        font-size: 12px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+}
