@@ -5,7 +5,7 @@ Welcome to the Math Doodle Challenge Game! This is a Flask web application desig
 ## How to Play
 
 1. **Getting Started**: To begin, simply click on the "Play" button.
-2. **Solve Equations**: The game will present you with a random mathematical equation.
+2. **Solve Equations**: The game will present you with a random mathematical equation until the timer runs out.
 3. **Draw Your Answer**: Use the canvas provided to draw your answer to the equation.
 4. **View Results**: The model will recognize your answer and provide the probability of correctness.
 5. **Score Calculation**: Your score is based on the probability of your answer being correct.
@@ -35,5 +35,8 @@ python app.py
 
 # Access the application in your web browser: http://127.0.0.1:5000/ (Default Flask development port)
 ```
+## Demo
+![Demo GIF](./demo/Math-Doodle.gif)
+
 
 Enjoy the Math Doodle Challenge Game and have fun testing your mathematical skills! If you encounter any issues or have any questions, don't hesitate to reach out. Happy doodling! 🎨🧠
