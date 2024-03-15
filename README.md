@@ -1,32 +1,39 @@
 # Math Doodle Challenge Game
 
-This project is a Flask web application that combines the power of PyTorch for handwritten digit recognition with a fun and engaging math game.
+Welcome to the Math Doodle Challenge Game! This is a Flask web application designed to test your mathematical skills in a fun and interactive way. The game utilizes a PyTorch model to recognize handwritten digits. 
 
-Features:
+## How to Play
 
--> Interactive Gameplay: Users click "play" to start, and a random equation is displayed.
--> Doodle Canvas: Users draw the answer to the equation directly on a canvas.
--> PyTorch-Powered Recognition: The trained PyTorch model analyzes the user's drawing and predicts the digit.
--> Probability Display: The web app shows the probability of the predicted digit being correct.
--> Score System: Scores are based on the prediction probability, rewarding higher certainty.
--> Highscore Table: The top 15 highest scores are stored and displayed.
--> Hall of Fame: Users achieving top 15 scores are prompted to enter their name for the highscore table.
+1. **Getting Started**: To begin, simply click on the "Play" button.
+2. **Solve Equations**: The game will present you with a random mathematical equation.
+3. **Draw Your Answer**: Use the canvas provided to draw your answer to the equation.
+4. **View Results**: The model will recognize your answer and provide the probability of correctness.
+5. **Score Calculation**: Your score is based on the probability of your answer being correct.
+6. **High Scores**: The web app keeps track of the top 15 highest scores achieved by players.
+7. **Enter Your Name**: If you make it to the top 15, the web app will prompt you to enter your name to be displayed on the high score table.
 
-Requirements:
- 
--> Python 3.x
--> Flask
--> PyTorch
--> Additional libraries for the canvas element (e.g., HTML5 Canvas or a JavaScript library)
+## Technologies Used
 
-Setup:
+- Flask: Web framework for developing the application.
+- PyTorch: Deep learning library used to train the model for digit recognition.
+- HTML/CSS/JavaScript: Frontend technologies for creating the user interface and interactivity.
 
-Clone this repository: git clone https://github.com/<your-username>/math-doodle-challenge.git
-Install dependencies: using pip install "dependency"
-Train the PyTorch model 
+## Installation
 
-Running the Application:
+1. Clone the repository:
 
+```bash
+git clone https://github.com/yourusername/Math-Doodle-Challenge.git
+
+2. Install the required dependencies:
+pip install 
+
+3. Run the Flask application:
 Navigate to the project directory: cd math-doodle-challenge
 Run the Flask development server: python app.py
 Access the application in your web browser: http://127.0.0.1:5000/ (Default Flask development port)
+
+
+
+
+Enjoy the Math Doodle Challenge Game and have fun testing your mathematical skills! If you encounter any issues or have any questions, don't hesitate to reach out. Happy doodling! 🎨🧠
