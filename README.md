@@ -20,7 +20,6 @@ Welcome to the Math Doodle Challenge Game! This is a Flask web application desig
 
 ## Installation
 
-```markdown
 ```bash
 # Clone the repository
 git clone https://github.com/Shivam-M-Patel/Math-Doodle-Challenge.git
