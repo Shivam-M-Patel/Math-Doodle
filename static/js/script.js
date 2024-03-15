@@ -313,15 +313,15 @@ fetch('/top-scores')
 
         // Add appropriate CSS classes to the cells
         const posCell = row.insertCell();
-        posCell.className = 'posCell'; // Add class for position cell
+        posCell.className = 'posCell'; 
         const nameCell = row.insertCell();
-        nameCell.className = 'nameCell'; // Add class for name cell
+        nameCell.className = 'nameCell'; 
         const scoreCell = row.insertCell();
-        scoreCell.className = 'scoreCell'; // Add class for score cell
+        scoreCell.className = 'scoreCell'; 
 
-        posCell.textContent = index + 1; // Set position
-        nameCell.textContent = entry.name; // Set name
-        scoreCell.textContent = entry.score; // Set score
+        posCell.textContent = index + 1; 
+        nameCell.textContent = entry.name; 
+        scoreCell.textContent = entry.score; 
 
         // Add class for the top 3 rows
         if (index < 3) {
