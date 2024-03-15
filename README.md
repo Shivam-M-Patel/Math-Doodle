@@ -13,7 +13,7 @@ Features:
 -> Hall of Fame: Users achieving top 15 scores are prompted to enter their name for the highscore table.
 
 Requirements:
-
+ 
 -> Python 3.x
 -> Flask
 -> PyTorch
