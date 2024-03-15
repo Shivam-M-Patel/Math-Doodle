@@ -20,22 +20,21 @@ Welcome to the Math Doodle Challenge Game! This is a Flask web application desig
 
 ## Installation
 
-1. Clone the repository:
-
+```markdown
 ```bash
-git clone https://github.com/yourusername/Math-Doodle-Challenge.git
+# Clone the repository
+git clone https://github.com/Shivam-M-Patel/Math-Doodle-Challenge.git
 
-2. Install the required dependencies:
-```bash
-pip install 
+# Navigate to the project directory
+cd Math-Doodle-Challenge
 
-3. Run the Flask application:
-```bash
-Navigate to the project directory: cd math-doodle-challenge
-Run the Flask development server: python app.py
-Access the application in your web browser: http://127.0.0.1:5000/ (Default Flask development port)
+# Install dependencies
+pip install flask torch torchvision
 
+# Run the Flask application
+python app.py
 
+# Access the application in your web browser: http://127.0.0.1:5000/ (Default Flask development port)
 
 
 Enjoy the Math Doodle Challenge Game and have fun testing your mathematical skills! If you encounter any issues or have any questions, don't hesitate to reach out. Happy doodling! 🎨🧠
