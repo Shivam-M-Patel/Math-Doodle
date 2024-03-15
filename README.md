@@ -1,4 +1,4 @@
-Math Doodle Challenge Game
+# Math Doodle Challenge Game
 
 This project is a Flask web application that combines the power of PyTorch for handwritten digit recognition with a fun and engaging math game.
 
