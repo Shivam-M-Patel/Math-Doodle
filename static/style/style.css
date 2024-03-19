@@ -8,14 +8,13 @@ html {
     padding: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
-    /* background-color: #1F2833; */
     background: linear-gradient(to bottom, #0B0C10, #1F2833);
     color: whitesmoke;
     float: left;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: calc(100% - 380px);
-    position: relative; /* Ensure z-index works */
+    position: relative; 
     z-index: 1;
 }
 
@@ -48,10 +47,10 @@ canvas {
     right: 20%;
     border: 2px solid #076685cd;
     font-size: 1rem;
-    font-weight: bold; /* Make the text bold */
-    color: #ffffff; /* Set text color */
+    font-weight: bold; 
+    color: #ffffff; 
     background-color: #076685cd;
-    border-radius: 5px; /* Add border radius */
+    border-radius: 5px;
     padding: 10px;
     max-width: calc(100% - (50% + 20px));
 }
@@ -237,24 +236,24 @@ table {
     border-spacing: 0;
     text-align: center;
     width: 30%;
-    border: 2px solid #076585; /* Adjusted border color */
+    border: 2px solid #076585; 
 }
 
 caption {
-    color: #e7e4e4; /* Adjusted color for the caption */
+    color: #e7e4e4; 
     margin-bottom: 7px;
     font-size: 20px;
 }
 
 th {
-    background: #3498db; /* Adjusted background color */
+    background: #3498db;
     padding: 10px 20px;
-    color: #ffffff; /* Adjusted color for th text */
+    color: #ffffff;
 }
 
 th,
 td {
-    border: 1px solid #076585; /* Adjusted border color */
+    border: 1px solid #076585;
 }
 
 th:first-child {
@@ -272,14 +271,14 @@ td:first-child {
 
 td {
     padding: 7px 20px;
-    background: #f5f5f5; /* Adjusted background color */
+    background: #f5f5f5;
     color: rgba(0, 0, 0, 0.6);
 }
 
 .top3 td {
     color: rgba(0, 0, 0, 1.0);
     font-weight: bold;
-    background: #cdcdcd; /* Adjusted background color */
+    background: #cdcdcd;
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -300,8 +299,8 @@ tr td:last-child {
 .footer-basic {
     margin-top: 180px;
     padding: 20px 0;
-    background-color: #34495e; /* Dark blueish color */
-    color: #ffffff; /* White text color */
+    background-color: #34495e;
+    color: #ffffff;
 }
 
 .footer-basic li {
@@ -331,9 +330,9 @@ tr td:last-child {
 .footer-basic .social > a:hover {
     opacity: 1;
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(52, 73, 94, 0.5); /* Shadow color matches footer background */
-    background-color: #2980b9; /* Background color on hover */
-    color: #ffffff; /* Text color on hover */
+    box-shadow: 0 0 10px rgba(52, 73, 94, 0.5);
+    background-color: #2980b9;
+    color: #ffffff;
 }
 
 .footer-basic .copyright {
@@ -406,17 +405,12 @@ tr td:last-child {
         margin: 10px;
     }
 
-    /*#game-container {*/
-    /*    display: flex;*/
-    /*    justify-content: space-between;*/
-    /*}*/
     #play-btn {
         margin-right: 50px;
     }
 
     #score-container {
         margin-top: 20px;
-        /*text-align: center;*/
         max-width: calc(100% - 50px);
     }
 
